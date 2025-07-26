@@ -1,100 +1,111 @@
-🌤️ Painel de Clima — React App
-Uma aplicação web moderna desenvolvida com React e Vite que permite consultar informações meteorológicas em tempo real de qualquer cidade do mundo, com suporte a geolocalização automática e previsão para os próximos dias. Os dados são obtidos da API pública wttr.in, que não requer chave de API.
-O design é elegante, com um painel branco semitransparente, ícones SVG, animações suaves e uma imagem de fundo personalizada, proporcionando uma experiência visual atraente e responsiva.
+# 🌤️ Painel de Clima — React App
 
+Uma aplicação web moderna desenvolvida com **React** e **Vite** que permite consultar informações meteorológicas em tempo real de qualquer cidade do mundo.  
+Os dados são obtidos via [wttr.in](https://wttr.in), uma API pública que **não requer chave de API**.
 
-🚀 Funcionalidades
+✨ O painel possui design elegante com imagem de fundo personalizada, painel semitransparente, animações suaves, ícones climáticos e layout responsivo.
 
-Busca de Cidade: Pesquise o clima de qualquer cidade digitando seu nome.
-Geolocalização Automática: Exibe o clima da sua localização atual ao carregar a página (com permissão do usuário).
-Previsão do Tempo: Mostra a previsão para os próximos 3 dias (hoje, amanhã e depois de amanhã).
-Dados Climáticos:
-Temperatura atual (°C)
-Condição climática com ícones SVG dinâmicos
-Umidade (%)
-Velocidade do vento (km/h)
+---
 
+## 🚀 Funcionalidades
 
-Interface Moderna:
-Painel branco semitransparente com sombra suave.
-Imagem de fundo personalizada cobrindo toda a tela.
-Animações de fade-in e slide-up para cartões de clima e previsão.
-Fonte Poppins para tipografia elegante.
-Layout responsivo para dispositivos móveis e desktops.
+### 🔍 Consulta Climática
+- Busca por nome de cidade.
+- Previsão para os próximos **3 dias**: hoje, amanhã e depois de amanhã.
+- Dados exibidos:
+  - Temperatura atual (°C)
+  - Condição climática com ícones visuais (☀️, 🌧️, ❄️...)
+  - Umidade (%)
+  - Velocidade do vento (km/h)
 
+### 📍 Geolocalização
+- Consulta automática do clima com base na sua **localização atual**, ao carregar a página (com permissão do navegador).
 
-Feedback Visual:
-Spinner animado durante o carregamento.
-Mensagens de erro claras para cidades inválidas ou falhas na geolocalização.
+### 💡 Interface Moderna
+- Painel branco **semi-transparente** com sombra suave.
+- **Imagem de fundo** personalizada cobrindo a tela.
+- Animações de **fade-in** e **slide-up**.
+- Tipografia com **Google Fonts (Poppins)**.
+- Layout **totalmente responsivo**.
 
+### 🛎️ Feedback Visual
+- Spinner animado durante carregamento.
+- Mensagens claras para cidades inválidas ou erros de geolocalização.
 
-🛠️ Tecnologias Utilizadas
+---
 
+## 🛠️ Tecnologias Utilizadas
 
-React: Biblioteca para construção da interface.
-Vite: Ferramenta de build rápida e moderna.
-wttr.in: API pública para dados climáticos.
-react-icons: Ícones SVG para condições climáticas.
-Google Fonts (Poppins): Tipografia moderna e elegante.
-CSS Puro: Estilização com animações e layout responsivo.
+- **React** — Interface declarativa
+- **Vite** — Bundler moderno e ultra rápido
+- **wttr.in API** — Dados climáticos sem necessidade de chave
+- **react-icons** — Ícones SVG climáticos
+- **Google Fonts (Poppins)** — Tipografia moderna
+- **CSS puro** — Estilização e animações
 
+---
 
-📦 Instalação e Uso
-Pré-requisitos
+## 📦 Instalação e Uso
 
-Node.js (versão 16 ou superior)
-npm ou yarn
+### ✅ Pré-requisitos
+- [Node.js](https://nodejs.org) (versão 16 ou superior)
+- npm ou yarn
 
-Passos
+### 🔧 Passos
 
-Clone o repositório:git clone https://github.com/dsmonteiro25/painel-clima.git
+```bash
+# Clone o repositório
+git clone https://github.com/dsmonteiro25/painel-clima.git
 
+# Acesse a pasta
+cd painel-clima
 
-Entre na pasta do projeto:cd painel-clima
+# Instale as dependências
+npm install
 
+# Inicie o servidor de desenvolvimento
+npm run dev
+Acesse em seu navegador: http://localhost:5173
 
-Instale as dependências:npm install
-
-
-Inicie o servidor de desenvolvimento:npm run dev
-
-
-Acesse no navegador:Abra http://localhost:5173.
-
-
-Nota: Certifique-se de que a imagem de fundo está em src/assets/background.jpg. Caso use outro nome ou formato (ex.: background.png), atualize o caminho no arquivo src/components/App.css.
-
+🔔 Importante: Certifique-se de que a imagem de fundo está localizada em src/assets/background.jpg.
+Se usar outro nome/formato (ex.: background.png), atualize o caminho em src/components/App.css.
 
 📸 Exemplo de Uso
 🌤️ São Paulo
-
-Condição: Partly cloudy ☁️
+Condição: ☁️ Partly cloudy
 Temperatura: 22°C
 Umidade: 65%
 Vento: 12 km/h
 
-📅 Previsão para os Próximos Dias
-Hoje: Partly cloudy ☁️, Max: 24°C, Min: 18°C
-Amanhã: Sunny ☀️, Max: 26°C, Min: 19°C
-Quarta, 27 Jul: Rain 🌧️, Max: 21°C, Min: 17°C
+📅 Previsão
+Hoje: ☁️ Partly cloudy — Max: 24°C / Min: 18°C
 
+Amanhã: ☀️ Sunny — Max: 26°C / Min: 19°C
+
+Quarta, 27 Jul: 🌧️ Rain — Max: 21°C / Min: 17°C
 
 💡 Como Contribuir
+Faça um fork do projeto
 
-Faça um fork do repositório.
-Crie uma branch para sua feature (git checkout -b feature/nova-funcionalidade).
-Commit suas mudanças (git commit -m 'Adiciona nova funcionalidade').
-Push para a branch (git push origin feature/nova-funcionalidade).
-Abra um Pull Request.
+Crie uma branch com sua feature: git checkout -b feature/nova-funcionalidade
 
-Sugestões de melhorias:
+Commit suas mudanças: git commit -m 'feat: adiciona nova funcionalidade'
 
-Adicionar um toggle de modo escuro/claro.
-Implementar histórico de buscas com localStorage.
-Adicionar suporte a outras unidades (ex.: Fahrenheit, mph).
-Integrar imagens de fundo dinâmicas via API (ex.: Unsplash).
+Push para sua branch: git push origin feature/nova-funcionalidade
 
+Abra um Pull Request
 
-📌 Autor
-Desenvolvido por Daniel Monteiro👨‍💻
-Este é o quarto projeto do meu portfólio como desenvolvedor front-end.
+💭 Melhorias Futuras (sugestões)
+🌗 Alternância entre modo escuro/claro
+
+🕓 Histórico de buscas com localStorage
+
+🌡️ Suporte a unidades imperiais (Fahrenheit, mph)
+
+🖼️ Imagens de fundo dinâmicas via API (ex.: Unsplash)
+
+👨‍💻 Autor
+Desenvolvido por Daniel Monteiro
+Este é o quarto projeto do meu portfólio como desenvolvedor Front-End.
+
+📌 Sinta-se à vontade para sugerir melhorias ou reportar problemas abrindo uma issue ou pull request.
